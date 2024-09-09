@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> This is a template for home page. </h1>
+
+<p>
+    {{ my_text }}, {{ my_number }}
+</p>
+<ul>
+{% for item in my_list %}
+    <li>{{ item }} - {{ item|divisibleby:"2"|yesno:"Even,Odd" }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
